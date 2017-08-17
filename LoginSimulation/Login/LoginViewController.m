@@ -8,9 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginView.h"
-#import "FLAccountHelper.h"
-#import "FLNavigationController.h"
-#import "FLTabBarController.h"
+#import "LoginManager.h"
 
 @interface LoginViewController ()<LoginViewDelegate>
 @property (nonatomic, weak) LoginView *loginView;
@@ -67,14 +65,18 @@
 
 - (void)loginView:(LoginView *)loginView didClickLookOtherButton:(UIButton *)button
 {
-    [[UIApplication sharedApplication].keyWindow setRootViewController:[FLTabBarController new]];
+    
+    [LoginManager skipToHomeVCBeforeLoginCompletion:nil];
 }
 
 - (void)loginView:(LoginView *)loginView didClickLoginBtn:(UIButton *)btn
 {
-
-    [FLAccountHelper saveAccount:@"zhangsan"];
-   [[UIApplication sharedApplication].keyWindow setRootViewController:[FLTabBarController new]];
+ 
+    [LoginManager processLoginWithParameters:@"张三" succcessProcess:^{
+        
+    } failureProcess:^{
+        
+    } allCompletionProcess:nil];
 
 }
 

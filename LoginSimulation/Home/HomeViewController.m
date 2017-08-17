@@ -8,9 +8,7 @@
 
 #import "HomeViewController.h"
 #import "FLAccountHelper.h"
-#import "FLNavigationController.h"
-#import "FLTabBarController.h"
-#import "LoginViewController.h"
+#import "LoginManager.h"
 
 @interface HomeViewController ()
 @property (nonatomic, weak) UIButton *button;
@@ -60,7 +58,7 @@
         return;
     }
     
-    [UIApplication sharedApplication].keyWindow.rootViewController = [[FLNavigationController alloc] initWithRootViewController:[LoginViewController new]];
+    [LoginManager skipToLoginViewControllerCompletion:nil];
 }
 
 @end

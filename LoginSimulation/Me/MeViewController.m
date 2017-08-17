@@ -9,9 +9,7 @@
 
 #import "MeViewController.h"
 #import "FLAccountHelper.h"
-#import "FLNavigationController.h"
-#import "FLTabBarController.h"
-#import "LoginViewController.h"
+#import "LoginManager.h"
 
 @interface MeViewController ()
 @property (nonatomic, weak) UIButton *button;
@@ -55,8 +53,11 @@
 #pragma mark - Touch Event
 - (void)buttonClicked:(UIButton *)button
 {
-    [FLAccountHelper removeAccount];
-    [UIApplication sharedApplication].keyWindow.rootViewController = [[FLNavigationController alloc] initWithRootViewController:[LoginViewController new]];
+    [LoginManager processLogoutSucccessProcess:^{
+        
+    } failureProcess:^{
+        
+    } allCompletionProcess:nil];
 }
 
 @end

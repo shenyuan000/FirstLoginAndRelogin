@@ -22,6 +22,7 @@
 		FA579A981F454589008C396B /* FLAccountHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA579A971F454589008C396B /* FLAccountHelper.m */; };
 		FA579A9B1F4573EB008C396B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA579A9A1F4573EB008C396B /* LoginViewController.m */; };
 		FA579A9E1F457415008C396B /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA579A9D1F457415008C396B /* LoginView.m */; };
+		FA579AA21F458BB9008C396B /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA579AA11F458BB9008C396B /* LoginManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		FA579A9A1F4573EB008C396B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FA579A9C1F457415008C396B /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		FA579A9D1F457415008C396B /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		FA579AA01F458BB9008C396B /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		FA579AA11F458BB9008C396B /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		FA579A631F453434008C396B /* LoginSimulation */ = {
 			isa = PBXGroup;
 			children = (
+				FA579A9F1F458B9B008C396B /* Manager */,
 				FA579A851F4535CB008C396B /* Login */,
 				FA579A7B1F4534DD008C396B /* Home */,
 				FA579A7C1F4534DD008C396B /* Main */,
@@ -172,6 +176,15 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		FA579A9F1F458B9B008C396B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA579AA01F458BB9008C396B /* LoginManager.h */,
+				FA579AA11F458BB9008C396B /* LoginManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +262,7 @@
 				FA579A811F453564008C396B /* FLNavigationController.m in Sources */,
 				FA579A691F453434008C396B /* AppDelegate.m in Sources */,
 				FA579A661F453434008C396B /* main.m in Sources */,
+				FA579AA21F458BB9008C396B /* LoginManager.m in Sources */,
 				FA579A9E1F457415008C396B /* LoginView.m in Sources */,
 				FA579A951F45368E008C396B /* FLAccountTool.m in Sources */,
 				FA579A981F454589008C396B /* FLAccountHelper.m in Sources */,
